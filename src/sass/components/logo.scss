@@ -1,0 +1,20 @@
+@import "../functions/functions";
+@import "../variables.scss";
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  @media screen and (min-width: px-to-rem(800px)) {
+    padding-left: px-to-rem(136px);
+  }
+  @media screen and (max-width: px-to-rem(800px)) {
+    padding-left: px-to-rem(25px);
+    padding-top: px-to-rem(17px);
+    padding-bottom: px-to-rem(16px);
+  }
+  &__text {
+    font-size: px-to-rem(32px);
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+  }
+}

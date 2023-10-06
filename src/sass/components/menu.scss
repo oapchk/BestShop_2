@@ -1,0 +1,42 @@
+@import "../functions/functions";
+@import "../mixins";
+
+.menu {
+  // @include flex;
+  @media screen and (max-width: px-to-rem(720px)) {
+    flex-direction: column;
+
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: px-to-rem(11px);
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    min-width: 8rem;
+    text-align: center;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    letter-spacing: px-to-rem(3.28px);
+
+    @media screen and (max-width: px-to-rem(720px)) {
+      color: gray;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-size: px-to-rem(11px);
+      text-transform: uppercase;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: px-to-rem(10px);
+      padding-top: px-to-rem(10px);
+      padding-bottom: px-to-rem(10px);
+    }
+  }
+}
