@@ -1,4 +1,6 @@
 @import "./general";
+@import "../variables";
+
 .hero {
   &__inner {
     font-family: "Raleway", sans-serif;
@@ -7,8 +9,10 @@
     margin-top: 6.25rem;
     padding-inline: 16px;
     @include flex(flex-start, center, column);
+    @media only screen and (max-width: 720px) {
+      margin-top: px-to-rem(116px);
+    }
   }
-
   &__hdl {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
