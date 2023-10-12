@@ -1,17 +1,14 @@
-// .hero__bg {
-//   @media only screen and (max-width: 1720px) {
-//     width: 100%;
-//   }
-// }
-
+@import "./general";
 .hero {
   &__inner {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-size: 3.0625rem;
     margin-top: 6.25rem;
+    padding-inline: 16px;
     @include flex(flex-start, center, column);
   }
+
   &__hdl {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
@@ -24,21 +21,22 @@
     text-align: center;
   }
   &__btn {
-    display: inline-block;
+    color: white;
+    margin: 0;
+    border: none;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     display: inline-block;
     text-decoration: none;
-    padding: 1.375rem 9.8125rem;
+    padding: 22px 92px;
     background-color: rgba(8, 166, 228, 1);
     border-radius: 40px;
-    color: white;
     box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
     font-size: 1rem;
   }
   &__bg {
-    @media only screen and (max-width: 1720px) {
-      width: 150%;
+    @media only screen and (max-width: 720px) {
+      width: 100%;
     }
   }
 }

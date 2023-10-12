@@ -6,6 +6,7 @@
   text-decoration: none;
   @media screen and (min-width: px-to-rem(800px)) {
     padding-left: px-to-rem(136px);
+    color: $primary-color;
   }
   @media screen and (max-width: px-to-rem(800px)) {
     padding-left: px-to-rem(25px);

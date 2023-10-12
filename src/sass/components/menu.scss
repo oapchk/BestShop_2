@@ -5,9 +5,8 @@
   // @include flex;
   @media screen and (max-width: px-to-rem(720px)) {
     flex-direction: column;
-
     position: absolute;
-    top: 60px;
+    top: px-to-rem(60px);
     right: 0;
   }
 
@@ -15,7 +14,7 @@
     display: inline-block;
     font-size: px-to-rem(11px);
     text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
+    font-family: $font-open-sans;
     font-weight: 700;
     text-decoration: none;
     min-width: 8rem;
@@ -31,7 +30,7 @@
       text-align: left;
       font-size: px-to-rem(11px);
       text-transform: uppercase;
-      font-family: "Open Sans", sans-serif;
+      font-family: $font-open-sans;
       font-weight: 700;
       text-decoration: none;
       margin-top: px-to-rem(10px);
