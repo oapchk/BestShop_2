@@ -318,11 +318,15 @@ template {
   width: 100%;
   margin-inline: auto;
   padding-inline: 1rem;
-  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: nowrap;
+}
+@media screen and (max-width: 45rem) {
+  .header__inner {
+    margin-top: 1rem;
+  }
 }
 
 .logo {
@@ -483,10 +487,9 @@ h2 {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
   font-size: 1rem;
 }
-@media only screen and (max-width: 720px) {
-  .hero__bg {
-    width: 100%;
-  }
+.hero__bg {
+  width: 100%;
+  height: auto;
 }
 
 * {
@@ -607,26 +610,44 @@ h2 {
 }
 
 .questions {
-  padding: 80px 100px 100px;
   display: flex;
   justify-content: center;
+  max-width: 56rem;
+  margin-inline: auto;
+  margin-bottom: 3.6875rem;
+  gap: 7.125rem;
+}
+@media screen and (max-width: 45rem) {
+  .questions {
+    flex-direction: column;
+    align-items: center;
+    padding: 3.125rem 1.875rem;
+  }
 }
 .questions__box {
   width: 50%;
 }
-@media screen and (max-width 45rem) {
+@media screen and (max-width: 45rem) {
   .questions__box {
     width: 100%;
   }
 }
 .questions__hdl {
+  margin-top: 0;
+  margin-bottom: 1.375rem;
   font-size: 3.0625rem;
-  line-height: 3.6875rem;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+@media screen and (max-width: 45rem) {
+  .questions__hdl {
+    font-size: 2.5rem;
+  }
 }
 .questions__lead {
   margin: 22px 0 42px;
   font-size: 1rem;
-  line-height: 1.375rem;
+  font-family: "Open Sans", sans-serif;
 }
 .questions__contact {
   display: flex;
@@ -634,24 +655,43 @@ h2 {
   color: rgb(165, 165, 165);
   align-items: center;
 }
-.questions__contact__details {
+.questions__details {
+  align-items: center;
   color: rgb(165, 165, 165);
   font-weight: 500;
   text-decoration: none;
 }
+.questions__details img {
+  margin-right: 0.625rem;
+}
 
-form {
+.form {
   display: flex;
   flex-direction: column;
 }
-form__box {
+.form__box {
   display: flex;
   flex-direction: column;
 }
-form__consent {
+.form__consent {
   margin-top: 30px;
 }
-form__checkbox {
+.form__btn {
+  color: white;
+  margin: 0;
+  padding: 20px 97px;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+  align-self: flex-end;
+  background-color: rgb(8, 166, 228);
+  border-radius: 40px;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+  font-size: 0.8125rem;
+}
+.form__checkbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -659,13 +699,13 @@ form__checkbox {
   cursor: pointer;
   font-size: 1.375rem;
 }
-form__checkbox:checked ~ .checkbox {
+.form__checkbox:checked ~ .checkbox {
   background-image: url(../../img/Checkmark.svg);
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
 }
-form .checkbox {
+.form .checkbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -675,11 +715,13 @@ form .checkbox {
   border: 1px solid rgb(165, 165, 165);
   border-radius: 4px;
 }
-form .consent__text {
+.form .consent__text {
   margin: 0 10px;
   font-size: 0.75rem;
   color: rgb(165, 165, 165);
-  line-height: 17px;
+  letter-spacing: 0;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
 }
 
 .box__label {
@@ -691,21 +733,22 @@ form .consent__text {
   line-height: 0.9rem;
   letter-spacing: 0.1875rem;
   font-size: 0.6875rem;
+  border-bottom: 1px solid rgb(165, 165, 165);
+  line-height: 3rem;
 }
 
-input {
+#email,
+#name {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
-  border-bottom: 1px solid rgb(165, 165, 165);
   background-color: transparent;
-  line-height: 2.625rem;
 }
 
 .footer {
-  box-shadow: 0 -0.3125rem 0.625rem -0.125rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -0.3125rem 2.5rem rgba(0, 0, 0, 0.1607843137);
   height: 5.5625rem;
   padding: 20px 0;
   display: flex;
@@ -739,7 +782,6 @@ input {
 .footer_lead {
   font-family: "Open Sans", sans-serif;
   font-size: 0.6875rem;
-  line-height: 1.5rem;
   color: rgb(165, 165, 165);
 }
 

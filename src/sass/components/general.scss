@@ -1,0 +1,15 @@
+@import "../variables";
+@import "../functions/functions";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: $base-font-size;
+}
+
+h2 {
+  font-family: $font-raleway;
+  font-size: px-to-rem(30px);
+}

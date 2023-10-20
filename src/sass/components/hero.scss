@@ -39,8 +39,7 @@
     font-size: 1rem;
   }
   &__bg {
-    @media only screen and (max-width: 720px) {
-      width: 100%;
-    }
+    width: 100%;
+    height: auto;
   }
 }

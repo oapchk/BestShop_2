@@ -1,0 +1,25 @@
+@import "../variables";
+
+.circle__red {
+  background-color: $red-color;
+  left: 0.5rem;
+  @media screen and (max-width: px-to-rem(720px)) {
+    left: 9rem;
+  }
+}
+
+.circle__green {
+  background-color: $green-color;
+  left: 0.5rem;
+  @media screen and (max-width: px-to-rem(720px)) {
+    left: 9rem;
+  }
+}
+
+.circle__blue {
+  background-color: $primary-color;
+  left: 1.5rem;
+  @media screen and (max-width: px-to-rem(720px)) {
+    left: 9rem;
+  }
+}
