@@ -1,1 +1,17 @@
 @import "../../node_modules/normalize.css/normalize";
+
+@import "./layout/header";
+@import "./components/logo";
+@import "./components/menu";
+@import "./components/hamburger";
+@import "./components/hero";
+
+@import "./components/general";
+
+@import "./layout/features";
+
+@import "./components/circle";
+@import "./components/questions";
+@import "./components/form";
+@import "./layout/footer";
+@import "./components/calculator";

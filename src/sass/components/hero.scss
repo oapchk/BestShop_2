@@ -1,0 +1,45 @@
+@import "./general";
+@import "../variables";
+
+.hero {
+  &__inner {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 3.0625rem;
+    margin-top: 6.25rem;
+    padding-inline: 16px;
+    @include flex(flex-start, center, column);
+    @media only screen and (max-width: 720px) {
+      margin-top: px-to-rem(116px);
+    }
+  }
+  &__hdl {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 3.0625rem;
+    text-align: center;
+  }
+  &__lead {
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+  }
+  &__btn {
+    color: white;
+    margin: 0;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    padding: 22px 92px;
+    background-color: rgba(8, 166, 228, 1);
+    border-radius: 40px;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+    font-size: 1rem;
+  }
+  &__bg {
+    width: 100%;
+    height: auto;
+  }
+}

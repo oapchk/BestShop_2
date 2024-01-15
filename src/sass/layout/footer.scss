@@ -1,0 +1,39 @@
+@import "../variables";
+
+.footer {
+  box-shadow: 0 px-to-rem(-5px) px-to-rem(40px) #00000029;
+  height: px-to-rem(89px);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+
+  &_inner {
+    max-width: px-to-rem(1627px);
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: px-to-rem(16px);
+    @include flex(space-between, center);
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media screen and (max-width: px-to-rem(720px)) {
+      // padding-left: px-to-rem(17px);
+      margin-top: px-to-rem(22.48px);
+    }
+  }
+  &__logo {
+    margin-bottom: px-to-rem(4px);
+    font-size: px-to-rem(26px);
+  }
+
+  &_lead {
+    font-family: $font-open-sans;
+    font-size: 0.6875rem;
+    //line-height: 1.5rem;
+    color: $grey-1;
+  }
+}
