@@ -41,12 +41,18 @@
     align-items: center;
   }
   &__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     color: $grey-1;
     font-weight: 500;
     text-decoration: none;
+    font-family: $font-open-sans;
+    padding-right: px-to-rem(20px);
     img {
-      margin-right: px-to-rem(10px);
+      margin-right: px-to-rem(5px);
     }
   }
 }

@@ -27,12 +27,12 @@
     font-size: px-to-rem(13px);
   }
   &__checkbox {
-    display: block;
+    display: flex;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 1.375rem;
+    // font-size: 1.375rem;
 
     &:checked {
       ~ .checkbox {
@@ -85,4 +85,11 @@
   height: 0;
   width: 0;
   background-color: transparent;
+}
+input#form {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
