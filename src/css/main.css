@@ -446,6 +446,10 @@ h2 {
   font-size: 1.875rem;
 }
 
+li {
+  list-style: none;
+}
+
 .hero__inner {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -504,6 +508,10 @@ body {
 h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1.875rem;
+}
+
+li {
+  list-style: none;
 }
 
 .features__hdl {
@@ -939,56 +947,43 @@ input#form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid blue;
+  border: 1px solid var(--accent-color);
   /*** Basic Box ***/
   /*** Professional Box **/
-  /*** Premium Box ***/
 }
 .pricing__version .btn {
   position: relative;
   bottom: -25px;
   font-size: 0.8125rem;
-  background-color: blue;
+  background-color: var(--accent-color);
 }
-.pricing__version--basic {
-  --accent-color: rgb(251, 59, 100);
-}
-.pricing__version--basic .version__price {
+.pricing__version .version__price {
   margin-bottom: 30px;
 }
-.pricing__version--professional {
-  --accent-color: rgb(8, 166, 228);
-  width: 400px;
-  margin: 0 40px;
-  box-shadow: 5px 1px 27px rgb(165, 165, 165);
-}
-.pricing__version--professional .pricing__hdl {
+.pricing__version .pricing__hdl {
   font-size: 1.3125rem;
 }
-.pricing__version--professional .pricing__item {
+.pricing__version .pricing__item {
   margin-bottom: 25px;
-}
-.pricing__version--premium {
-  --accent-color: rgb(85, 223, 180);
 }
 .pricing__name {
   margin-top: 34px;
   margin-bottom: 60px;
   text-align: center;
 }
-.pricing__hdl {
+.pricing .version__hdl {
   font-size: 1.25rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
-.pricing__price {
+.pricing .version__price {
   font-size: 2.875rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   margin-top: 25px;
-  color: rgb(0, 0, 0);
+  color: var(--accent-color);
 }
-.pricing__limited {
+.pricing .version__limited {
   text-align: center;
   margin-top: 15px;
   font-size: 0.75rem;
@@ -997,21 +992,37 @@ input#form {
 }
 .pricing__features {
   text-align: center;
+  padding-left: 0;
 }
-.pricing__item {
+.pricing .pricing__item {
   font-size: 14px;
   margin-bottom: 20px;
 }
-.pricing__item::before {
+.pricing .pricing__item::before {
   content: "";
   width: 11px;
   height: 11px;
   display: inline-block;
   margin-right: 10px;
-  background-image: url("../assets/Checkmark-1.svg");
+  background-image: url("../img/Checkmark.svg");
 }
-.pricing__item--not::before {
-  background-image: url("../assets/Close.svg");
+.pricing .pricing__item--not_include::before {
+  background-image: url("../img/Close.svg");
+}
+
+.pricing--premium {
+  --accent-color: rgb(85, 223, 180);
+}
+
+.pricing--basic {
+  --accent-color: rgb(251, 59, 100);
+}
+
+.pricing--professional {
+  --accent-color: rgb(8, 166, 228);
+  width: 400px;
+  margin: 0 40px;
+  box-shadow: 5px 1px 27px rgb(165, 165, 165);
 }
 
 /*# sourceMappingURL=main.css.map */

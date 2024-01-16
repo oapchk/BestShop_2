@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   &__versions {
     display: flex;
     align-items: center;
@@ -25,8 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid blue;
-
+    border: 1px solid var(--accent-color);
     // @include notebook {
     //   width: 100%;
     //   max-width: 370px;
@@ -45,49 +43,25 @@
       position: relative;
       bottom: -25px;
       font-size: 0.8125rem;
-      background-color: blue;
+      background-color: var(--accent-color);
     }
 
     /*** Basic Box ***/
-    &--basic {
-      --accent-color: #{$red-color};
 
-      .version__price {
-        margin-bottom: 30px;
-
-        // @include notebook {
-        //   margin-bottom: 0;
-        // }
-      }
+    .version__price {
+      margin-bottom: 30px;
     }
 
     /*** Professional Box **/
-    &--professional {
-      --accent-color: #{$primary-color};
-      width: 400px;
-      margin: 0 40px;
-      box-shadow: 5px 1px 27px $grey-1;
 
-      // @include notebook {
-      //   max-width: 400px;
-      //   width: 100%;
-      //   margin: 0 0 50px 0;
-      // }
-
-      .pricing {
-        &__hdl {
-          font-size: 1.3125rem;
-        }
-
-        &__item {
-          margin-bottom: 25px;
-        }
+    .pricing {
+      &__hdl {
+        font-size: 1.3125rem;
       }
-    }
 
-    /*** Premium Box ***/
-    &--premium {
-      --accent-color: #{$green-color};
+      &__item {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -102,21 +76,21 @@
     // }
   }
 
-  &__hdl {
+  .version__hdl {
     font-size: 1.25rem;
     font-family: $font-raleway;
     font-weight: 700;
   }
 
-  &__price {
+  .version__price {
     font-size: 2.875rem;
     font-family: $font-open-sans;
     font-weight: 300;
     margin-top: 25px;
-    color: $black;
+    color: var(--accent-color);
   }
 
-  &__limited {
+  .version__limited {
     text-align: center;
     margin-top: 15px;
     font-size: 0.75rem;
@@ -126,6 +100,7 @@
 
   &__features {
     text-align: center;
+    padding-left: 0;
 
     // @include notebook {
     //   width: 50%;
@@ -133,7 +108,7 @@
     // }
   }
 
-  &__item {
+  .pricing__item {
     font-size: 14px;
     margin-bottom: 20px;
 
@@ -149,11 +124,24 @@
       height: 11px;
       display: inline-block;
       margin-right: 10px;
-      background-image: url("../assets/Checkmark-1.svg");
+      background-image: url("../img/Checkmark.svg");
     }
 
-    &--not::before {
-      background-image: url("../assets/Close.svg");
+    &--not_include::before {
+      background-image: url("../img/Close.svg");
     }
   }
+}
+
+.pricing--premium {
+  --accent-color: #{$green-color};
+}
+.pricing--basic {
+  --accent-color: #{$red-color};
+}
+.pricing--professional {
+  --accent-color: #{$primary-color};
+  width: 400px;
+  margin: 0 40px;
+  box-shadow: 5px 1px 27px $grey-1;
 }
