@@ -1,0 +1,159 @@
+@import "../variables";
+
+.pricing {
+  margin: px-to-rem(100px) auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__versions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    // @include notebook {
+    //   flex-direction: column;
+    //   width: 100%;
+    // }
+  }
+
+  &__version {
+    width: 370px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid blue;
+
+    // @include notebook {
+    //   width: 100%;
+    //   max-width: 370px;
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    //   margin-bottom: 50px;
+    //   justify-content: center;
+    //   padding: 25px 10px 0 10px;
+
+    //   &:last-child {
+    //     margin-bottom: 0;
+    //   }
+    // }
+
+    .btn {
+      position: relative;
+      bottom: -25px;
+      font-size: 0.8125rem;
+      background-color: blue;
+    }
+
+    /*** Basic Box ***/
+    &--basic {
+      --accent-color: #{$red-color};
+
+      .version__price {
+        margin-bottom: 30px;
+
+        // @include notebook {
+        //   margin-bottom: 0;
+        // }
+      }
+    }
+
+    /*** Professional Box **/
+    &--professional {
+      --accent-color: #{$primary-color};
+      width: 400px;
+      margin: 0 40px;
+      box-shadow: 5px 1px 27px $grey-1;
+
+      // @include notebook {
+      //   max-width: 400px;
+      //   width: 100%;
+      //   margin: 0 0 50px 0;
+      // }
+
+      .pricing {
+        &__hdl {
+          font-size: 1.3125rem;
+        }
+
+        &__item {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    /*** Premium Box ***/
+    &--premium {
+      --accent-color: #{$green-color};
+    }
+  }
+
+  &__name {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+
+    // @include notebook {
+    //   width: 50%;
+    //   margin: 0;
+    // }
+  }
+
+  &__hdl {
+    font-size: 1.25rem;
+    font-family: $font-raleway;
+    font-weight: 700;
+  }
+
+  &__price {
+    font-size: 2.875rem;
+    font-family: $font-open-sans;
+    font-weight: 300;
+    margin-top: 25px;
+    color: $black;
+  }
+
+  &__limited {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    font-family: $font-raleway;
+    font-weight: 700;
+  }
+
+  &__features {
+    text-align: center;
+
+    // @include notebook {
+    //   width: 50%;
+    //   text-align: left;
+    // }
+  }
+
+  &__item {
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    // @include notebook {
+    //   &:last-child {
+    //     margin-bottom: 0;
+    //   }
+    // }
+
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      margin-right: 10px;
+      background-image: url("../assets/Checkmark-1.svg");
+    }
+
+    &--not::before {
+      background-image: url("../assets/Close.svg");
+    }
+  }
+}
