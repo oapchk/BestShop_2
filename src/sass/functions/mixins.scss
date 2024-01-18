@@ -1,0 +1,29 @@
+@use "sass:map";
+@import "../variables";
+
+@mixin flex($horizontal: flex-start, $vertical: flex-start, $wrap: nowrap) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+  flex-direction: $wrap;
+}
+
+@mixin media-q($bp) {
+  $width: map.get($grid-breakpoints, $bp);
+
+  @if not map.has-key($grid-breakpoints, $bp) {
+    @warn 'Klucza: #{$bp} nie ma w mapie breakpointów. Wybierz jeden z tych: xs, sm, md, lg, xl, xxl. Domyślnie ustawiam xs';
+    $width: xs;
+  }
+
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin flex($horizontal: flex-start, $vertical: flex-start, $wrap: nowrap) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+  flex-direction: $wrap;
+}

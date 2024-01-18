@@ -939,37 +939,69 @@ input#form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 3.125rem;
+}
+@media screen and (max-width: 1200px) {
+  .pricing__versions {
+    flex-direction: column;
+    gap: 3.25rem;
+    margin-top: 4.4375rem;
+  }
 }
 .pricing__version {
-  width: 370px;
-  border-radius: 18px;
+  width: 23.125rem;
+  border-radius: 1.125rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--accent-color);
-  /*** Basic Box ***/
-  /*** Professional Box **/
+  border: 0.0625rem solid var(--accent-color);
+}
+@media screen and (max-width: 768px) {
+  .pricing__version {
+    width: 100%;
+    max-width: 370px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3.125rem;
+    justify-content: center;
+    padding: 1.5625rem 0.625rem 0 0.625rem;
+  }
+  .pricing__version:last-child {
+    margin-bottom: 0;
+  }
 }
 .pricing__version .btn {
   position: relative;
-  bottom: -25px;
+  bottom: -1.5625rem;
   font-size: 0.8125rem;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
   background-color: var(--accent-color);
+  text-decoration: none;
+  padding: 1rem 4.0625rem;
+  border-radius: 2.1875rem;
+  font-family: "Open Sans", sans-serif;
 }
 .pricing__version .version__price {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .pricing__version .pricing__hdl {
   font-size: 1.3125rem;
 }
 .pricing__version .pricing__item {
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
 }
 .pricing__name {
-  margin-top: 34px;
-  margin-bottom: 60px;
+  margin-top: 2.125rem;
+  margin-bottom: 3.75rem;
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .pricing__name {
+    width: 50%;
+    margin: 0;
+  }
 }
 .pricing .version__hdl {
   font-size: 1.25rem;
@@ -980,12 +1012,12 @@ input#form {
   font-size: 2.875rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   color: var(--accent-color);
 }
 .pricing .version__limited {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
   font-size: 0.75rem;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -994,17 +1026,31 @@ input#form {
   text-align: center;
   padding-left: 0;
 }
+@media screen and (max-width: 576px) {
+  .pricing__features {
+    width: 50%;
+    text-align: left;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+  }
+}
 .pricing .pricing__item {
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+@media screen and (max-width: 576px) {
+  .pricing .pricing__item:last-child {
+    margin-bottom: 0;
+  }
 }
 .pricing .pricing__item::before {
   content: "";
-  width: 11px;
-  height: 11px;
+  width: 0.6875rem;
+  height: 0.6875rem;
   display: inline-block;
-  margin-right: 10px;
-  background-image: url("../img/Checkmark.svg");
+  margin-right: 0.625rem;
+  background-image: url("../img/Checmark-1.svg");
 }
 .pricing .pricing__item--not_include::before {
   background-image: url("../img/Close.svg");
@@ -1020,9 +1066,9 @@ input#form {
 
 .pricing--professional {
   --accent-color: rgb(8, 166, 228);
-  width: 400px;
-  margin: 0 40px;
-  box-shadow: 5px 1px 27px rgb(165, 165, 165);
+  width: 25.3125rem;
+  margin: 0 3.125rem;
+  box-shadow: 0.3125rem 0.0625rem 1.6875rem rgb(165, 165, 165);
 }
 
 /*# sourceMappingURL=main.css.map */

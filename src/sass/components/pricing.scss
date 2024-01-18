@@ -1,5 +1,5 @@
 @import "../variables";
-
+@import "../functions/mixins.scss";
 .pricing {
   margin: px-to-rem(100px) auto;
   display: flex;
@@ -10,49 +10,53 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: px-to-rem(50px);
 
-    // @include notebook {
-    //   flex-direction: column;
-    //   width: 100%;
-    // }
+    @include media-q(xl) {
+      flex-direction: column;
+      gap: px-to-rem(52px);
+      margin-top: px-to-rem(71px);
+    }
   }
 
   &__version {
-    width: 370px;
-    border-radius: 18px;
+    width: px-to-rem(370px);
+    border-radius: px-to-rem(18px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid var(--accent-color);
-    // @include notebook {
-    //   width: 100%;
-    //   max-width: 370px;
-    //   flex-direction: row;
-    //   flex-wrap: wrap;
-    //   margin-bottom: 50px;
-    //   justify-content: center;
-    //   padding: 25px 10px 0 10px;
+    border: px-to-rem(1px) solid var(--accent-color);
+    @include media-q(md) {
+      width: 100%;
+      max-width: 370px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: px-to-rem(50px);
+      justify-content: center;
+      padding: px-to-rem(25px) px-to-rem(10px) 0 px-to-rem(10px);
 
-    //   &:last-child {
-    //     margin-bottom: 0;
-    //   }
-    // }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     .btn {
       position: relative;
-      bottom: -25px;
-      font-size: 0.8125rem;
+      bottom: px-to-rem(-25px);
+      font-size: px-to-rem(13px);
+      color: white;
+      font-weight: 600;
+      display: inline-block;
       background-color: var(--accent-color);
+      text-decoration: none;
+      padding: px-to-rem(16px) px-to-rem(65px);
+      border-radius: px-to-rem(35px);
+      font-family: $font-open-sans;
     }
-
-    /*** Basic Box ***/
 
     .version__price {
-      margin-bottom: 30px;
+      margin-bottom: px-to-rem(30px);
     }
-
-    /*** Professional Box **/
 
     .pricing {
       &__hdl {
@@ -60,20 +64,20 @@
       }
 
       &__item {
-        margin-bottom: 25px;
+        margin-bottom: px-to-rem(25px);
       }
     }
   }
 
   &__name {
-    margin-top: 34px;
-    margin-bottom: 60px;
+    margin-top: px-to-rem(34px);
+    margin-bottom: px-to-rem(60px);
     text-align: center;
 
-    // @include notebook {
-    //   width: 50%;
-    //   margin: 0;
-    // }
+    @include media-q(sm) {
+      width: 50%;
+      margin: 0;
+    }
   }
 
   .version__hdl {
@@ -86,13 +90,13 @@
     font-size: 2.875rem;
     font-family: $font-open-sans;
     font-weight: 300;
-    margin-top: 25px;
+    margin-top: px-to-rem(25px);
     color: var(--accent-color);
   }
 
   .version__limited {
     text-align: center;
-    margin-top: 15px;
+    margin-top: px-to-rem(15px);
     font-size: 0.75rem;
     font-family: $font-raleway;
     font-weight: 700;
@@ -102,29 +106,31 @@
     text-align: center;
     padding-left: 0;
 
-    // @include notebook {
-    //   width: 50%;
-    //   text-align: left;
-    // }
+    @include media-q(sm) {
+      width: 50%;
+      text-align: left;
+      flex-direction: row;
+      justify-content: left;
+      align-items: flex-start;
+    }
   }
 
   .pricing__item {
-    font-size: 14px;
-    margin-bottom: 20px;
-
-    // @include notebook {
-    //   &:last-child {
-    //     margin-bottom: 0;
-    //   }
-    // }
+    font-size: px-to-rem(14px);
+    margin-bottom: px-to-rem(20px);
+    @include media-q(sm) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &::before {
       content: "";
-      width: 11px;
-      height: 11px;
+      width: px-to-rem(11px);
+      height: px-to-rem(11px);
       display: inline-block;
-      margin-right: 10px;
-      background-image: url("../img/Checkmark.svg");
+      margin-right: px-to-rem(10px);
+      background-image: url("../img/Checmark-1.svg");
     }
 
     &--not_include::before {
@@ -141,7 +147,7 @@
 }
 .pricing--professional {
   --accent-color: #{$primary-color};
-  width: 400px;
-  margin: 0 40px;
-  box-shadow: 5px 1px 27px $grey-1;
+  width: px-to-rem(405px);
+  margin: 0 px-to-rem(50px);
+  box-shadow: px-to-rem(5px) px-to-rem(1px) px-to-rem(27px) $grey-1;
 }
