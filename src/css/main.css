@@ -525,7 +525,7 @@ li {
   gap: 13rem;
   margin-bottom: 6.5625rem;
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 900px) {
   .features__section {
     flex-direction: column;
     gap: 2rem;
@@ -941,7 +941,7 @@ input#form {
   justify-content: center;
   margin-top: 3.125rem;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1290px) {
   .pricing__versions {
     flex-direction: column;
     gap: 3.25rem;
@@ -997,7 +997,7 @@ input#form {
   margin-bottom: 3.75rem;
   text-align: center;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .pricing__name {
     width: 50%;
     margin: 0;
@@ -1026,23 +1026,18 @@ input#form {
   text-align: center;
   padding-left: 0;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .pricing__features {
     width: 50%;
     text-align: left;
     flex-direction: row;
     justify-content: left;
-    align-items: flex-start;
+    align-content: flex-start;
   }
 }
 .pricing .pricing__item {
   font-size: 0.875rem;
   margin-bottom: 1.25rem;
-}
-@media screen and (max-width: 576px) {
-  .pricing .pricing__item:last-child {
-    margin-bottom: 0;
-  }
 }
 .pricing .pricing__item::before {
   content: "";

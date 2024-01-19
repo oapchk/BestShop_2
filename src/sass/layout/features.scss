@@ -1,5 +1,5 @@
 @import "../variables";
-
+@import "../functions/mixins.scss";
 .features {
   &__hdl {
     margin-bottom: 6rem;
@@ -11,7 +11,7 @@
     text-align: center;
     gap: 13rem;
     margin-bottom: 6.5625rem;
-    @media screen and (max-width: px-to-rem(720px)) {
+    @include media-q(lg) {
       flex-direction: column;
       gap: 2rem;
     }
