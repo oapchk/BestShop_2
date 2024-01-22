@@ -1,7 +1,6 @@
 @import "../variables";
 
 .questions {
-  // padding: 80px 100px 100px;
   display: flex;
   justify-content: center;
   max-width: px-to-rem(896px);
@@ -12,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     padding: px-to-rem(50px) px-to-rem(30px);
+    margin-bottom: 0;
   }
   &__box {
     width: 50%;
@@ -20,7 +20,7 @@
     }
   }
   &__hdl {
-    margin-top: 0;
+    margin-top: px-to-rem(42px);
     margin-bottom: px-to-rem(22px);
     font-size: px-to-rem(49px);
     font-weight: 300;

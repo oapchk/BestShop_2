@@ -1,6 +1,6 @@
 @import "../functions/functions";
 @import "../mixins";
-
+@import "../functions/mixins.scss";
 .menu {
   // @include flex;
   @media screen and (max-width: px-to-rem(720px)) {
@@ -22,20 +22,25 @@
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
     letter-spacing: px-to-rem(3.28px);
+    border-bottom: 4px solid transparent;
 
-    @media screen and (max-width: px-to-rem(720px)) {
-      color: gray;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      font-size: px-to-rem(11px);
-      text-transform: uppercase;
-      font-family: $font-open-sans;
-      font-weight: 700;
-      text-decoration: none;
-      margin-top: px-to-rem(10px);
-      padding-top: px-to-rem(10px);
-      padding-bottom: px-to-rem(10px);
+    &:hover {
+      border-color: $primary-color;
+
+      @media screen and (max-width: px-to-rem(720px)) {
+        color: gray;
+        text-decoration: none;
+        display: none;
+        text-align: left;
+        font-size: px-to-rem(11px);
+        text-transform: uppercase;
+        font-family: $font-open-sans;
+        font-weight: 700;
+        text-decoration: none;
+        margin-top: px-to-rem(10px);
+        padding-top: px-to-rem(10px);
+        padding-bottom: px-to-rem(10px);
+      }
     }
   }
 }

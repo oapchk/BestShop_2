@@ -6,6 +6,7 @@
   &__box {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid $grey-1;
   }
 
   &__consent {
@@ -27,19 +28,25 @@
     font-size: px-to-rem(13px);
   }
   &__checkbox {
-    display: flex;
+    display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    // font-size: 1.375rem;
-
-    &:checked {
-      ~ .checkbox {
-        background-image: url(../../img/Checkmark.svg);
-        background-position: center;
-        background-size: 50%;
-        background-repeat: no-repeat;
+    font-size: 1.375rem;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked {
+        ~ .checkbox {
+          background-image: url(../img/Checkmark.svg);
+          background-position: center;
+          background-size: 50%;
+          background-repeat: no-repeat;
+        }
       }
     }
   }
@@ -55,7 +62,7 @@
   }
 
   .consent__text {
-    margin: 0 10px;
+    // margin: 0 21px;
     font-size: 0.75rem;
     color: $grey-1;
     letter-spacing: 0;
@@ -71,25 +78,21 @@
   color: $primary-color;
   font-weight: 700;
   line-height: 0.9rem;
+  height: 17px;
   letter-spacing: px-to-rem(3px);
   font-size: px-to-rem(11px);
-  border-bottom: 1px solid $grey-1;
-  line-height: px-to-rem(48px);
+  margin-top: px-to-rem(42px);
 }
 
 #email,
 #name {
-  position: absolute;
-  opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
   background-color: transparent;
-}
-input#form {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+  line-height: 2;
+  border: none;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 5px 1px $primary-color;
+    border-radius: px-to-rem(4px);
+  }
 }
