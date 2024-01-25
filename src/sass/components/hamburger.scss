@@ -3,6 +3,12 @@
 #toggle {
   display: none;
 }
+.menu {
+  @media screen and (max-width: px-to-rem(720px)) {
+    display: none;
+  }
+}
+
 .hamburger {
   position: absolute;
   top: px-to-rem(55px);
@@ -29,18 +35,24 @@
 
 #toggle:checked + .hamburger .top {
   transform: rotate(-45deg);
-  margin-top: px-to-rem(25px);
+  margin-top: 25px; /* Adjust this value based on your design */
 }
+
 #toggle:checked + .hamburger .bottom {
   opacity: 0;
   transform: rotate(45deg);
 }
+
 #toggle:checked + .hamburger .middle {
   transform: rotate(45deg);
-  margin-top: px-to-rem(-7px);
+  margin-top: -7px; /* Adjust this value based on your design */
 }
 
 #toggle:checked + .hamburger + .menu {
-  // top: 0;
-  transform: scale(0);
+  top: 0;
+  transform: scale(1); /* Change 100 to 1 for a valid scale value */
+}
+
+#toggle:checked + .hamburger + .menu {
+  display: block; /* Show the menu when the checkbox is checked */
 }

@@ -10,7 +10,7 @@
     padding-inline: 16px;
     @include flex(flex-start, center, column);
     @media only screen and (max-width: 720px) {
-      margin-top: px-to-rem(116px);
+      margin-top: px-to-rem(100px);
     }
   }
   &__hdl {

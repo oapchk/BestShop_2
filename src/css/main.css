@@ -346,11 +346,11 @@ template {
 }
 
 @media screen and (max-width: 45rem) {
-  .menu {
+  .menu__wrapper {
     flex-direction: column;
     position: absolute;
-    top: 3.75rem;
-    right: 0;
+    top: 1.875rem;
+    right: 15.625rem;
   }
 }
 .menu__item {
@@ -371,24 +371,30 @@ template {
   border-color: rgb(8, 166, 228);
 }
 @media screen and (max-width: 45rem) {
-  .menu__item:hover {
+  .menu__item {
     color: gray;
     text-decoration: none;
-    display: none;
     text-align: left;
     font-size: 0.6875rem;
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
     margin-top: 0.625rem;
     padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
   }
 }
 
 #toggle {
   display: none;
+}
+
+@media screen and (max-width: 45rem) {
+  .menu {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -419,7 +425,7 @@ template {
 
 #toggle:checked + .hamburger .top {
   transform: rotate(-45deg);
-  margin-top: 1.5625rem;
+  margin-top: 25px; /* Adjust this value based on your design */
 }
 
 #toggle:checked + .hamburger .bottom {
@@ -429,11 +435,16 @@ template {
 
 #toggle:checked + .hamburger .middle {
   transform: rotate(45deg);
-  margin-top: -0.4375rem;
+  margin-top: -7px; /* Adjust this value based on your design */
 }
 
 #toggle:checked + .hamburger + .menu {
-  transform: scale(0);
+  top: 0;
+  transform: scale(1); /* Change 100 to 1 for a valid scale value */
+}
+
+#toggle:checked + .hamburger + .menu {
+  display: block; /* Show the menu when the checkbox is checked */
 }
 
 * {
@@ -467,7 +478,7 @@ li {
 }
 @media only screen and (max-width: 720px) {
   .hero__inner {
-    margin-top: 7.25rem;
+    margin-top: 6.25rem;
   }
 }
 .hero__hdl {

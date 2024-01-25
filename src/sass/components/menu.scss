@@ -2,14 +2,14 @@
 @import "../mixins";
 @import "../functions/mixins.scss";
 .menu {
-  // @include flex;
-  @media screen and (max-width: px-to-rem(720px)) {
-    flex-direction: column;
-    position: absolute;
-    top: px-to-rem(60px);
-    right: 0;
+  &__wrapper {
+    @media screen and (max-width: px-to-rem(720px)) {
+      flex-direction: column;
+      position: absolute;
+      top: px-to-rem(30px);
+      right: px-to-rem(250px);
+    }
   }
-
   &__item {
     display: inline-block;
     font-size: px-to-rem(11px);
@@ -26,21 +26,20 @@
 
     &:hover {
       border-color: $primary-color;
-
-      @media screen and (max-width: px-to-rem(720px)) {
-        color: gray;
-        text-decoration: none;
-        display: none;
-        text-align: left;
-        font-size: px-to-rem(11px);
-        text-transform: uppercase;
-        font-family: $font-open-sans;
-        font-weight: 700;
-        text-decoration: none;
-        margin-top: px-to-rem(10px);
-        padding-top: px-to-rem(10px);
-        padding-bottom: px-to-rem(10px);
-      }
+    }
+    @media screen and (max-width: px-to-rem(720px)) {
+      color: gray;
+      text-decoration: none;
+      text-align: left;
+      font-size: px-to-rem(11px);
+      text-transform: uppercase;
+      font-family: $font-open-sans;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      margin-top: px-to-rem(10px);
+      padding-top: px-to-rem(10px);
     }
   }
 }
