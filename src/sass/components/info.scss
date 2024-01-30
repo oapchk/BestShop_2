@@ -1,0 +1,85 @@
+@import "../variables.scss";
+
+.info {
+  background-color: #f7f7f7;
+  padding-block: px-to-rem(105px);
+  &__container {
+    width: px-to-rem(1124px);
+    margin-inline: auto;
+  }
+
+  &__onebox {
+    height: px-to-rem(370px);
+    border: px-to-rem(1px) solid #e8e9ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: white;
+
+    margin-bottom: px-to-rem(40px);
+    border-radius: px-to-rem(5px);
+    :nth-of-type(2) {
+      padding-right: px-to-rem(20px);
+    }
+    &.info__box--notebook {
+      // Styles specific to notebook onebox
+    }
+
+    &.info__box--phone {
+      // Styles specific to phone onebox
+    }
+
+    &.info__box--trumpet {
+      // Styles specific to trumpet onebox
+    }
+  }
+
+  &__text {
+    max-width: px-to-rem(420px);
+    padding-left: px-to-rem(35px);
+    font-family: $font-open-sans;
+    margin-block: auto;
+  }
+
+  &__img {
+    // margin: auto;
+    &--trumpet {
+      width: 440px;
+      height: 370px;
+      background-color: $green-color;
+      img {
+        padding-left: px-to-rem(62px);
+        padding-top: px-to-rem(98px);
+      }
+    }
+  }
+
+  &__hdl {
+    text-align: left;
+    margin-top: 0;
+    &2 {
+    }
+  }
+
+  &__lead {
+  }
+}
+
+.info__line {
+  display: block;
+  width: px-to-rem(327px);
+  height: px-to-rem(4px);
+  margin-top: px-to-rem(50px);
+
+  &--red {
+    background-color: $red-color;
+  }
+
+  &--blue {
+    background-color: $primary-color;
+  }
+
+  &--green {
+    background-color: $green-color;
+  }
+}

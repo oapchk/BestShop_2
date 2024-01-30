@@ -33,7 +33,9 @@
   &_lead {
     font-family: $font-open-sans;
     font-size: 0.6875rem;
-    //line-height: 1.5rem;
     color: $grey-1;
+    @media screen and (min-width: px-to-rem(860px)) {
+      padding-left: px-to-rem(110px);
+    }
   }
 }

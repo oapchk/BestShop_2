@@ -5,28 +5,16 @@
   ul {
     margin-block-start: 0;
   }
-  // @include tablet {
-  //   padding: 30px 15px;
-  // }
 
   &__columns {
     max-width: 865px;
     margin: 50px auto 0;
     display: flex;
-
-    // @include tablet {
-    //   display: block;
-    // }
   }
 
   &__form {
     width: 50%;
     margin-right: 20px;
-
-    // @include tablet {
-    //   width: 100%;
-    //   margin-right: 0;
-    // }
   }
 
   &__input input,
@@ -115,12 +103,6 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-
-    // @include tablet {
-    //   width: 100%;
-    //   margin-left: 0;
-    //   margin-top: 30px;
-    // }
 
     .summary__total,
     .list__item {
