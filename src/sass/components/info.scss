@@ -1,11 +1,15 @@
 @import "../variables.scss";
-
+@import "../mixins.scss";
 .info {
   background-color: #f7f7f7;
   padding-block: px-to-rem(105px);
   &__container {
     width: px-to-rem(1124px);
     margin-inline: auto;
+    @include media-q(xl) {
+      width: auto;
+      margin-inline: px-to-rem(30px);
+    }
   }
 
   &__onebox {
@@ -15,22 +19,29 @@
     justify-content: space-between;
     align-items: flex-end;
     background-color: white;
-
     margin-bottom: px-to-rem(40px);
     border-radius: px-to-rem(5px);
+
     :nth-of-type(2) {
       padding-right: px-to-rem(20px);
     }
+
     &.info__box--notebook {
-      // Styles specific to notebook onebox
+      @include media-q(lg) {
+        flex-direction: column-reverse;
+      }
     }
 
     &.info__box--phone {
-      // Styles specific to phone onebox
+      @include media-q(lg) {
+        flex-direction: column;
+      }
     }
 
     &.info__box--trumpet {
-      // Styles specific to trumpet onebox
+      @include media-q(lg) {
+        flex-direction: column;
+      }
     }
   }
 
