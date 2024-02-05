@@ -9,11 +9,15 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    width: auto;
+
     gap: 13rem;
     margin-bottom: 6.5625rem;
     @include media-q(lg) {
+      align-items: center;
       flex-direction: column;
       gap: 2rem;
+      margin-bottom: px-to-rem(50px);
     }
   }
   &_number {
@@ -61,10 +65,10 @@
 }
 
 .features__circle {
-  height: 3.9375rem;
-  width: 3.9375rem;
+  width: px-to-rem(62.71px);
+  height: px-to-rem(62.71px);
   border-radius: 50%;
-  display: inline-block;
+  // display: inline-block;
   position: absolute;
   z-index: -42;
 }

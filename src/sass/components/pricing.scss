@@ -149,6 +149,6 @@
 .pricing--professional {
   --accent-color: #{$primary-color};
   width: px-to-rem(405px);
-  margin: 0 px-to-rem(50px);
+  // margin: 0 px-to-rem(50px);
   box-shadow: px-to-rem(5px) px-to-rem(1px) px-to-rem(27px) $grey-1;
 }

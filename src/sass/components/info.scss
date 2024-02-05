@@ -3,6 +3,9 @@
 .info {
   background-color: #f7f7f7;
   padding-block: px-to-rem(105px);
+  @include media-q(lg) {
+    padding-block: px-to-rem(50px);
+  }
   &__container {
     width: px-to-rem(1124px);
     margin-inline: auto;

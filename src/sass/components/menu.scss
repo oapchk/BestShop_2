@@ -3,13 +3,12 @@
 @import "../functions/mixins.scss";
 .menu {
   &__wrapper {
+    // width: 100%;
+
     @media screen and (max-width: px-to-rem(720px)) {
-      width: 100%;
       display: flex;
       flex-direction: column;
-      padding-inline: px-to-rem(16px);
-      // top: px-to-rem(30px);
-      // right: px-to-rem(250px);
+      // padding-inline: px-to-rem(25px);
       padding-bottom: px-to-rem(30px);
       padding-top: px-to-rem(20px);
       box-shadow: 0 px-to-rem(4px) px-to-rem(10px) px-to-rem(-2px)
@@ -26,7 +25,9 @@
     min-width: 8rem;
     text-align: center;
     padding-top: 1.75rem;
+    align-items: center;
     padding-bottom: 1.75rem;
+    padding-inline: px-to-rem(47px);
     letter-spacing: px-to-rem(3.28px);
     border-bottom: 4px solid transparent;
     @media screen and (max-width: px-to-rem(720px)) {
