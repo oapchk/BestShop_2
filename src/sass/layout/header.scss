@@ -2,7 +2,11 @@
 @import "../mixins";
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  background-color: #fff;
   box-shadow: 0 px-to-rem(4px) px-to-rem(10px) px-to-rem(-2px)
     rgba(0, 0, 0, 0.2);
   height: px-to-rem(70px);
@@ -12,9 +16,11 @@
     width: 100%;
     margin-inline: auto;
     padding-inline: px-to-rem(16px);
+    @include flex(space-between, center);
     @media screen and (max-width: px-to-rem(720px)) {
       margin-top: px-to-rem(16px);
+      display: block;
+      padding-inline: 0;
     }
-    @include flex(space-between, center);
   }
 }

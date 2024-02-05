@@ -308,7 +308,11 @@ template {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  background-color: #fff;
   box-shadow: 0 0.25rem 0.625rem -0.125rem rgba(0, 0, 0, 0.2);
   height: 4.375rem;
   box-sizing: border-box;
@@ -326,6 +330,8 @@ template {
 @media screen and (max-width: 45rem) {
   .header__inner {
     margin-top: 1rem;
+    display: block;
+    padding-inline: 0;
   }
 }
 
@@ -348,10 +354,13 @@ template {
 
 @media screen and (max-width: 45rem) {
   .menu__wrapper {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 1.875rem;
-    right: 15.625rem;
+    padding-inline: 1rem;
+    padding-bottom: 1.875rem;
+    padding-top: 1.25rem;
+    box-shadow: 0 0.25rem 0.625rem -0.125rem rgba(0, 0, 0, 0.2);
   }
 }
 .menu__item {
@@ -367,6 +376,11 @@ template {
   padding-bottom: 1.75rem;
   letter-spacing: 0.205rem;
   border-bottom: 4px solid transparent;
+}
+@media screen and (max-width: 45rem) {
+  .menu__item {
+    border: none;
+  }
 }
 .menu__item:hover {
   border-color: rgb(8, 166, 228);
@@ -664,7 +678,7 @@ li {
 .questions__box {
   width: 50%;
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 56.4375rem) {
   .questions__box {
     width: 100%;
   }
@@ -692,7 +706,7 @@ li {
   color: rgb(165, 165, 165);
   align-items: center;
 }
-@media screen and (max-width: 45rem) {
+@media screen and (max-width: 53.75rem) {
   .questions__contact {
     flex-direction: column;
     align-items: flex-start;
@@ -984,11 +998,21 @@ li {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 900px) {
+  .pricing {
+    margin-top: 1.875rem;
+  }
+}
 .pricing__versions {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 3.125rem;
+}
+@media screen and (max-width: 576px) {
+  .pricing__versions {
+    width: 375px;
+  }
 }
 @media screen and (max-width: 1290px) {
   .pricing__versions {
@@ -1040,6 +1064,7 @@ li {
 }
 .pricing__version .pricing__item {
   margin-bottom: 1.5625rem;
+  font-family: "Open Sans", sans-serif;
 }
 .pricing__name {
   margin-top: 2.125rem;
@@ -1139,12 +1164,28 @@ li {
   margin-bottom: 2.5rem;
   border-radius: 0.3125rem;
 }
+@media screen and (max-width: 900px) {
+  .info__onebox {
+    height: auto;
+    align-items: center;
+  }
+}
 .info__onebox :nth-of-type(2) {
   padding-right: 1.25rem;
 }
 @media screen and (max-width: 900px) {
+  .info__onebox.info__box--notebook img {
+    transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 900px) {
   .info__onebox.info__box--notebook {
     flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 900px) {
+  .info__onebox.info__box--phone img {
+    transform: scale(0.5);
   }
 }
 @media screen and (max-width: 900px) {
@@ -1163,24 +1204,62 @@ li {
   font-family: "Open Sans", sans-serif;
   margin-block: auto;
 }
+@media screen and (max-width: 900px) {
+  .info__text {
+    margin-block: 1.5625rem;
+    padding-right: 2.1875rem;
+  }
+}
+.info__img {
+  max-width: 100%;
+  height: auto;
+}
 .info__img--trumpet {
   width: 440px;
   height: 370px;
   background-color: rgb(85, 223, 180);
+  position: relative;
+}
+@media screen and (max-width: 900px) {
+  .info__img--trumpet {
+    width: 100%;
+    height: 12.1875rem;
+  }
 }
 .info__img--trumpet img {
-  padding-left: 3.875rem;
-  padding-top: 6.125rem;
+  position: absolute;
+}
+@media screen and (max-width: 900px) {
+  .info__img--trumpet img {
+    margin: auto;
+    display: block;
+  }
 }
 .info__hdl {
   text-align: left;
   margin-top: 0;
 }
+@media screen and (max-width: 900px) {
+  .info__hdl {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .info__lead {
+    font-size: 0.875rem;
+  }
+}
+
 .info__line {
   display: block;
   width: 20.4375rem;
   height: 0.25rem;
   margin-top: 3.125rem;
+}
+@media screen and (max-width: 900px) {
+  .info__line {
+    display: none;
+  }
 }
 .info__line--red {
   background-color: rgb(251, 59, 100);

@@ -6,12 +6,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include media-q(lg) {
+    margin-top: px-to-rem(30px);
+  }
   &__versions {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: px-to-rem(50px);
-
+    @include media-q(sm) {
+      width: 375px;
+    }
     @include media-q(xxl) {
       flex-direction: column;
       gap: px-to-rem(52px);
@@ -65,6 +70,7 @@
 
       &__item {
         margin-bottom: px-to-rem(25px);
+        font-family: $font-open-sans;
       }
     }
   }

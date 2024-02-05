@@ -21,18 +21,31 @@
     background-color: white;
     margin-bottom: px-to-rem(40px);
     border-radius: px-to-rem(5px);
-
+    @include media-q(lg) {
+      height: auto;
+      align-items: center;
+    }
     :nth-of-type(2) {
       padding-right: px-to-rem(20px);
     }
 
     &.info__box--notebook {
+      img {
+        @include media-q(lg) {
+          transform: scale(0.5);
+        }
+      }
       @include media-q(lg) {
         flex-direction: column-reverse;
       }
     }
 
     &.info__box--phone {
+      img {
+        @include media-q(lg) {
+          transform: scale(0.5);
+        }
+      }
       @include media-q(lg) {
         flex-direction: column;
       }
@@ -50,17 +63,34 @@
     padding-left: px-to-rem(35px);
     font-family: $font-open-sans;
     margin-block: auto;
+    @include media-q(lg) {
+      margin-block: px-to-rem(25px);
+      padding-right: px-to-rem(35px);
+    }
   }
 
   &__img {
-    // margin: auto;
+    max-width: 100%;
+    height: auto;
+
     &--trumpet {
       width: 440px;
       height: 370px;
       background-color: $green-color;
+      position: relative;
+      @include media-q(lg) {
+        width: 100%;
+        height: px-to-rem(195px);
+      }
       img {
-        padding-left: px-to-rem(62px);
-        padding-top: px-to-rem(98px);
+        position: absolute;
+        // padding-left: px-to-rem(62px);
+        // padding-top: px-to-rem(98px);
+        // transform: translate(-50%, -50%);
+        @include media-q(lg) {
+          margin: auto;
+          display: block;
+        }
       }
     }
   }
@@ -68,11 +98,17 @@
   &__hdl {
     text-align: left;
     margin-top: 0;
+    @include media-q(lg) {
+      font-size: px-to-rem(30px);
+    }
     &2 {
     }
   }
 
   &__lead {
+    @include media-q(lg) {
+      font-size: px-to-rem(14px);
+    }
   }
 }
 
@@ -81,7 +117,9 @@
   width: px-to-rem(327px);
   height: px-to-rem(4px);
   margin-top: px-to-rem(50px);
-
+  @include media-q(lg) {
+    display: none;
+  }
   &--red {
     background-color: $red-color;
   }
